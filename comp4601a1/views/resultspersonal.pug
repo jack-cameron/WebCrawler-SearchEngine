@@ -1,0 +1,14 @@
+html
+  head 
+    title= "COMP4601 Assignment #1"
+  body
+    h1= "COMP4601 Assignment #1 - Personal Website Results"
+    br
+    a(href="/") Home 
+    br
+    br
+    if pages.length != 0
+      for x in pages
+        a(href=`/pages/${x.ref}`) #{x.ref} 
+        p score: #{x.score}
+        br

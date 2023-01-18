@@ -1,0 +1,22 @@
+html
+  head 
+    title= "COMP4601 Assignment #1"
+  body
+    h1= `COMP4601 Assignment #1 - ${page.name}`
+    a(href='/') Home 
+    br
+    p URL to this page: 
+    a(href=`https://people.scs.carleton.ca/~davidmckenney/fruitgraph/${page.name}.html`) https://people.scs.carleton.ca/~davidmckenney/fruitgraph/#{page.name}.html
+    br
+    br
+    p Content: #{page.content}
+    br
+    p Incoming Links: 
+    br
+    each x in page.incoming
+        a(href=`/fruits/${x}`) #{x}
+        br
+    p Outgoing Links: 
+    each x in page.outgoing 
+        a(href=`/fruits/${x}`) #{x}
+        br

@@ -1,0 +1,16 @@
+html
+  head 
+    title= "COMP4601 Assignment #1"
+  body
+    h1= "COMP4601 Assignment #1 - Fruit Website Results"
+    br
+    a(href="/") Home 
+    br
+    br
+    if pages.length != 0
+      for x in pages
+        a(href=`/fruits/${x.ref}`) #{x.ref}
+        br
+        a(href=`https://people.scs.carleton.ca/~davidmckenney/fruitgraph/${x.ref}.html`) https://people.scs.carleton.ca/~davidmckenney/fruitgraph/#{x.ref}.html
+        p PageRank score: #{x.score}
+        br

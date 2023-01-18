@@ -1,0 +1,31 @@
+html
+  head 
+    title= "COMP4601 Assignment #1"
+  body
+    h1= "COMP4601 Assignment #1"
+    br
+    form(action='/fruits' method='GET')
+      p 
+        | Search Fruit Website:
+        input(type='text' name='searchfruit')
+      p
+        | Boost: 
+        input(type='radio' id='bf1' name='boostfruit') 
+        label(for='bf1') yes
+      p
+        | Limit (Min- 1, Max- 50, default-10): 
+        input(type='text' name='limitfruit' value='10')
+      input(type='submit' value='Search')
+    br
+    form(action='/personal' method='GET')
+      p 
+        | Search Personal Website:
+        input(type='text' name='searchpersonal')
+      p
+        | Boost: 
+        input(type='radio' id='bp1' name='boostpersonal')
+        label(for='bp1') yes
+      p
+        | Limit (Min- 1, Max- 50, default-10): 
+        input(type='text' name='limitpersonal' value='10') 
+      input(type='submit' value='Search')
